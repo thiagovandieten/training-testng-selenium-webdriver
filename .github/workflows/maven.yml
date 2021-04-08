@@ -19,7 +19,7 @@ jobs:
       with:
         java-version: 14
     - name: Build with Maven
-      run: mvn clean test -P prestashop-answers -DseleniumBrowser=chrome_headless && mvn clean test -P parabank-answers -DseleniumBrowser=chrome_headless
+      run: mvn test -P prestashop-answers -DseleniumBrowser=chrome_headless && mvn test -P parabank-answers -DseleniumBrowser=chrome_headless
     - name: Publish Test Report
       if: always()
       uses: scacap/action-surefire-report@v1

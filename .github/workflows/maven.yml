@@ -18,10 +18,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 14
-    - name: Run Prestashop answers
-      run: mvn test -P prestashop-answers -DseleniumBrowser=chrome_headless
-    - name: Run Parabank answers
-      run: mvn test -P parabank-answers -DseleniumBrowser=chrome_headless
+    - name: Run all answers
+      run: mvn test -P all-answers -DseleniumBrowser=chrome_headless
     - name: Publish Test Report
       if: always()
       uses: scacap/action-surefire-report@v1

@@ -13,6 +13,7 @@ public class Exercise8Search extends TestBase {
 
     @Test
     public void search() {
+        getDriver().get("http://demo.seleniuminaction.com");
         new HomePage(getDriver()).searchFor("shirt");
 
         Assertions.assertThat(new SearchResultsPage(getDriver()).getProductNames()).contains("Faded Short Sleeves T-shirt");

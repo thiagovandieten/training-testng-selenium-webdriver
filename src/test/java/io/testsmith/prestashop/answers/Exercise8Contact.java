@@ -15,6 +15,8 @@ public class Exercise8Contact extends TestBase {
 
     @Test
     public void completeContactForm_confirmationShown() {
+        getDriver().get("http://demo.seleniuminaction.com");
+
         ServiceDetails details = new ServiceDetails();
         details.setSubject(ContactSubject.CUSTOMER_SERVICE);
         details.setEmail("email@test.com");
@@ -29,6 +31,8 @@ public class Exercise8Contact extends TestBase {
 
     @Test
     public void invalidEmailGiven_shouldShowErrorMessage() {
+        getDriver().get("http://demo.seleniuminaction.com");
+
         ServiceDetails details = new ServiceDetails();
         details.setSubject(ContactSubject.CUSTOMER_SERVICE);
         details.setEmail("email");

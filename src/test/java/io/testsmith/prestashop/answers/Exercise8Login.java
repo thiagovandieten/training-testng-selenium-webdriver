@@ -14,6 +14,8 @@ public class Exercise8Login extends TestBase {
 
     @Test
     public void loginSuccess() {
+        getDriver().get("http://demo.seleniuminaction.com");
+
         MyAccountPage accountPage = new HomePage(getDriver()) //
                 .clickOnLogin().loginWith("tester@test.com", "1qazxsw2");
 
@@ -23,6 +25,8 @@ public class Exercise8Login extends TestBase {
 
     @Test
     public void loginAccountDoesNotExist() {
+        getDriver().get("http://demo.seleniuminaction.com");
+
         AuthenticationPage authenticationPage = new HomePage(getDriver()) //
                 .clickOnLogin();
         authenticationPage.loginWith("1234@test.com", "1qazxsw2");

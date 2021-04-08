@@ -12,6 +12,8 @@ public class Exercise2 extends TestBase {
 
     @Test
     public void loginSuccess() {
+        getDriver().get("http://demo.seleniuminaction.com/index.php");
+
         getDriver().findElement(By.cssSelector(".login")).click();
 
         getDriver().findElement(By.name("email")).sendKeys("tester@test.com");
@@ -24,6 +26,8 @@ public class Exercise2 extends TestBase {
 
     @Test
     public void loginAccountDoesNotExist() {
+        getDriver().get("http://demo.seleniuminaction.com/index.php");
+
         getDriver().findElement(By.cssSelector(".login")).click();
 
         getDriver().findElement(By.name("email")).sendKeys("1234@test.com");

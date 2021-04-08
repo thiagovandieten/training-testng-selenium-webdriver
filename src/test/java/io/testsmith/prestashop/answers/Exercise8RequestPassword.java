@@ -13,6 +13,7 @@ public class Exercise8RequestPassword extends TestBase {
 
     @Test
     public void requestNewPasswordExistingUser_SuccessMessageShown() {
+        getDriver().get("http://demo.seleniuminaction.com");
         ForgotPasswordPage page = new HomePage(getDriver())
                 .clickOnLogin() //
                 .clickOnForgotPassword() //
@@ -23,6 +24,7 @@ public class Exercise8RequestPassword extends TestBase {
 
     @Test
     public void requestNewPasswordNonExistingUser_ErrorMessageShown() {
+        getDriver().get("http://demo.seleniuminaction.com");
         ForgotPasswordPage page = new HomePage(getDriver())
                 .clickOnLogin() //
                 .clickOnForgotPassword() //

@@ -16,6 +16,8 @@ public class Exercise8Register extends TestBase {
 
     @Test
     public void register() {
+        getDriver().get("http://demo.seleniuminaction.com");
+
         String rand = Integer.toString(new Random().nextInt());
         MyAccountPage accountPage = new HomePage(getDriver())
                 .clickOnLogin() //

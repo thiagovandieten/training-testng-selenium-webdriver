@@ -34,7 +34,6 @@ public abstract class TestBase {
     @BeforeMethod
     @Parameters(value = {"seleniumBrowser", "environment"})
     public void setup(@Optional("chrome") String browser, @Optional("local") String environment) throws MalformedURLException {
-        System.out.println(environment);
         if (Environment.valueOf(environment.toUpperCase()).equals(Environment.LOCAL)) {
             switch (Browser.valueOf(browser.toUpperCase())) {
                 case CHROME:
@@ -81,7 +80,6 @@ public abstract class TestBase {
             driver.set(new RemoteWebDriver(new URL(DOCKER_SELENIUM_HUB_URL), dc));
         }
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        getDriver().get("http://demo.seleniuminaction.com");
         getDriver().manage().window().maximize();
     }
 

@@ -9,6 +9,12 @@ import org.testng.annotations.Test;
  **/
 public class Exercise8Search extends TestBase {
 
+    /**
+     * 1. Navigate to http://demo.seleniuminaction.com
+     * 2. Enter `shirt` in the search textfield
+     * 3. Click on the magnifier button
+     * 4. Validate if the result `Faded Short Sleeves T-shirt` is visible
+     */
     @Test
     public void search() {
         Assert.fail("Implement this test.");

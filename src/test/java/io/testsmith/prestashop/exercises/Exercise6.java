@@ -8,9 +8,12 @@ import org.testng.annotations.Test;
  * Test a slow form
  **/
 public class Exercise6 extends TestBase {
+
     /**
-     * Works, as long as the timeOutInSeconds didn't exceeds <br/>
-     * In this case we just wait as long as needed.
+     * 1. Navigate to http://www.seleniuminaction.com/examples/FormWithDelay.html
+     * 2. Enter `First name`, `Last name` and `email`
+     * 3. Click on the `Save` button
+     * 4. Wait just long enough till the text `Well done! Thanks for submitting the information!` is visible
      */
     @Test
     public void waitForSuccessMessage_withWait() {

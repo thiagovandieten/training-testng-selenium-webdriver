@@ -25,7 +25,7 @@ public class Exercise3RequestLoan extends TestBase {
         getDriver().findElement(By.id("amount")).sendKeys("10000");
         getDriver().findElement(By.id("downPayment")).sendKeys("100");
         Select dropdownFromAccountId = new Select(getDriver().findElement(By.id("fromAccountId")));
-        dropdownFromAccountId.selectByVisibleText("54321");
+        dropdownFromAccountId.selectByVisibleText("21225");
 
         getDriver().findElement(By.xpath("//input[@value='Apply Now']")).click();
 

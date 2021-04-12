@@ -1,6 +1,6 @@
 # WebDriver TestNG Project
 
-![Badge](https://github.com/testsmith-io/selenium-training/actions/workflows/maven.yml/badge.svg)
+![Badge](https://github.com/testsmith-io/training-selenium/actions/workflows/maven.yml/badge.svg)
 
 
 This project is generated from an archetype. It exists out of TestNG, Selenium WebDriver, WebDriver Manager, Allure and

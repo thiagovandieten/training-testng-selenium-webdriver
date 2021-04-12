@@ -1,4 +1,4 @@
-name: Selenium Training
+name: Training Selenium
 
 on:
   workflow_dispatch:

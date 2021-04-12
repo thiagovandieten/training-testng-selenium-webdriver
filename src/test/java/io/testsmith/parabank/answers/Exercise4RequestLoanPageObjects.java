@@ -14,7 +14,7 @@ public class Exercise4RequestLoanPageObjects extends TestBase {
         String result = new LoginPage(getDriver()).
                 loadAndLoginAs("john", "demo")
                 .navigateToRequestLoan()
-                .submitLoanRequest("10000", "10", "54321")
+                .submitLoanRequest("10000", "10", "21225")
                 .getLoanApplicationResult();
 
         Assert.assertEquals(result, "Denied");

@@ -1,6 +1,6 @@
-# WebDriver TestNG Project
+# Training TestNG Selenium WebDriver Project
 
-![Badge](https://github.com/testsmith-io/training-selenium/actions/workflows/maven.yml/badge.svg)
+![Badge](https://github.com/testsmith-io/training-testng-selenium-webdriver/actions/workflows/maven.yml/badge.svg)
 
 
 This project is generated from an archetype. It exists out of TestNG, Selenium WebDriver, WebDriver Manager, Allure and
@@ -56,11 +56,3 @@ By default, Chrome will be used.
 `mvn allure:report`
 
 `mvn allure:serve`
-
-## Check for dependecy updates
-
-`mvn versions:display-dependency-updates`
-
-## Update to latest release version
-
-`versions:update-properties`

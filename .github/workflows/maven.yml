@@ -1,4 +1,4 @@
-name: Training Selenium
+name: Training TestNG Selenium WebDriver
 
 on:
   workflow_dispatch:

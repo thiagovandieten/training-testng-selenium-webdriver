@@ -23,11 +23,11 @@ public class RequestLoanPage extends AbstractPageBase {
         super(driver);
     }
 
-    public RequestLoanResultPage submitLoanRequest(String loanAmount, String downPayment, String fromAccountId) {
+    public RequestLoanResultPage submitLoanRequest(String loanAmount, String downPayment, int fromAccountIdIndex) {
         loanAmoountTextfield.sendKeys(loanAmount);
         downPaymentTextfield.sendKeys(downPayment);
         Select dropdown = new Select(fromAccountIdSelect);
-        dropdown.selectByVisibleText(fromAccountId);
+        dropdown.selectByIndex(fromAccountIdIndex);
         applyButton.click();
         return new RequestLoanResultPage(driver);
     }

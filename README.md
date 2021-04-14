@@ -22,7 +22,7 @@ The following Maven profiles can be used:
 By default, Chrome will be used. To override the default browser, you can use the following command (and choose one of
 the supporting browsers):
 
-`mvn clean test -P prestashop-exercises -DseleniumBrowser=firefox`
+`mvn clean test -P prestashop-answers -DseleniumBrowser=firefox`
 
 ### Parabank
 
@@ -33,7 +33,7 @@ the supporting browsers):
 By default, Chrome will be used. To override the default browser, you can use the following command (and choose one of
 the supporting browsers):
 
-`mvn clean test -P parabank-exercises -DseleniumBrowser=firefox`
+`mvn clean test -P parabank-answers -DseleniumBrowser=firefox`
 
 ### Prestashop (using docker)
 
@@ -41,7 +41,9 @@ the supporting browsers):
 
 `mvn clean test -P prestashop-answers-docker`
 
-By default, Chrome will be used.
+By default, Chrome will be used. To override the default browser, you can use the following command (and choose `firefox`, `chrome` or `edge`):
+
+`mvn clean test -P prestashop-answers-docker -DseleniumBrowser=firefox`
 
 ### Parabank (using docker)
 
@@ -49,7 +51,9 @@ By default, Chrome will be used.
 
 `mvn clean test -P parabank-answers-docker`
 
-By default, Chrome will be used.
+By default, Chrome will be used. To override the default browser, you can use the following command (and choose `firefox`, `chrome` or `edge`):
+
+`mvn clean test -P parabank-answers-docker -DseleniumBrowser=firefox`
 
 ## Generate report
 

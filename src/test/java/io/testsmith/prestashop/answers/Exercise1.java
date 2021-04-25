@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Register a new account
@@ -19,7 +20,7 @@ public class Exercise1 extends TestBase {
         final String rand = Integer.toString(new Random().nextInt());
 
         getDriver().get("http://demo.seleniuminaction.com/index.php");
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         getDriver().findElement(By.cssSelector("a.login")).click();
 

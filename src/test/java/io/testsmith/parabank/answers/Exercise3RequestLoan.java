@@ -29,7 +29,7 @@ public class Exercise3RequestLoan extends TestBase {
 
         getDriver().findElement(By.xpath("//input[@value='Apply Now']")).click();
 
-        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.
+        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.
                 textToBePresentInElement(
                         getDriver().findElement(By.id("loanStatus")), "Denied"));
 

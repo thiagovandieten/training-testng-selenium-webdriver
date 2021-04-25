@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -18,7 +19,7 @@ public class Exercise4 extends TestBase {
     @Test
     public void submitSearch_shouldDisplayResult() {
         getDriver().get("http://demo.seleniuminaction.com/index.php");
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         getDriver().findElement(By.name("search_query")).sendKeys("shirt");
         getDriver().findElement(By.name("submit_search")).click();

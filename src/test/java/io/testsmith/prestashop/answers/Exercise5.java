@@ -7,8 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.sql.Time;
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -28,7 +30,7 @@ public class Exercise5 extends TestBase {
     @Test(dataProvider = "data")
     public void searchSuccess(String query, String expectedResult) {
         getDriver().get("http://demo.seleniuminaction.com/index.php");
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         getDriver().findElement(By.name("search_query")).sendKeys(query);
         getDriver().findElement(By.name("submit_search")).click();

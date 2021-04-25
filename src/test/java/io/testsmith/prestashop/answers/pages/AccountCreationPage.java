@@ -47,7 +47,7 @@ public class AccountCreationPage extends AbstractPageBase {
     }
 
     public AccountCreationPage setTitle(Title mr) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.visibilityOf(maleRadio));
 
         if (mr.equals(Title.MR)) {
